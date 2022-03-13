@@ -38,6 +38,13 @@ const Projects = () => {
       src: require("../assets/videos/uber-mobile-video.webm"),
       link: "https://github.com/cbedroid/Uber-Clone",
     },
+    {
+      id: 6,
+      name: "Vue Weather App",
+      tech: "VueJS ",
+      src: require("../assets/videos/vue-weather-video.webm"),
+      link: "https://cbedroid.github.io/vue-weather-app/",
+    },
   ];
 
   return (
