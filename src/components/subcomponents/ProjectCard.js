@@ -27,7 +27,7 @@ const ProjectCard = (props) => {
               {props?.name}
             </h4>
             <div className="divide-y divide-gray-400/50">
-              <video src={props?.src} muted style={{ width: "700px" }} />
+              <video src={props?.src} autoPlay loop muted style={{ width: "700px" }} />
             </div>
           </div>
         </div>
