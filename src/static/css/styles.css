@@ -1,0 +1,39 @@
+html, body {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-smoothing: -ms-antialiase;
+  font-smoothing: -webkit-antialiase;
+  -moz-font-smoothing: antialiase;
+  -o-font-smoothing: antialiase;
+  font-smoothing: antialiase;
+  text-rendering: -ms-optimizeLegibility;
+  text-rendering: -webkit-optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden; }
+
+body {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  background: #fff; }
+
+section {
+  padding-top: 42px;
+  padding-bottom: 42px; }
+
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500; }
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out; }
+
+.contact-details:hover {
+  transform: translateY(8px); }
