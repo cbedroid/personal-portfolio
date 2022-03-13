@@ -6,21 +6,16 @@ const Header = () => {
   const links = [
     {
       id: 1,
-      name: "Home",
-      href: "/",
-    },
-    {
-      id: 2,
       name: "About",
       href: "#about",
     },
     {
-      id: 3,
+      id: 2,
       name: "Work",
       href: "#projects",
     },
     {
-      id: 4,
+      id: 3,
       name: "Contact",
       href: "#contact",
     },
@@ -33,7 +28,7 @@ const Header = () => {
   return (
     <>
       <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-      <div x-data={isOpen} id="navbar" className="fixed top-0 left-0 z-50 bg-gray-800 border-b-2 border-gray-200 shadow h-24 w-full">
+      <nav x-data={isOpen} id="navbar" className="fixed top-0 left-0 z-50 bg-gray-800 border-b-2 border-gray-200 shadow h-24 w-full">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center h-full md:px-12">
           <div className="flex justify-between items-center">
             <div className="flex md:hidden">
@@ -47,7 +42,7 @@ const Header = () => {
           <div className={`md:flex items-center ${isOpen ? "block" : "hidden"}`}>
             <ul className="flex flex-col mt-2 md:flex-row md:items-center md:gap-4 md:mt-0 md:mx-1">
               {links.map((link) => (
-                <li className="group" key={link.id}>
+                <li className="group nav-link" key={link.id}>
                   <a className="text-xl text-white group-hover:text-gray-300 font-semibold" href={link.href}>
                     {link.name}
                   </a>
@@ -56,7 +51,7 @@ const Header = () => {
             </ul>
           </div>
         </div>
-      </div>
+      </nav>
     </>
   );
 };
