@@ -23,7 +23,7 @@ const ProjectCard = (props) => {
             </div>
           </div>
           <div className="max-w-md mx-auto">
-            <h4 tabindex="0" class="focus:outline-none text-gray-800 dark:text-gray-100 text-xl font-bold mb-3 p-2">
+            <h4 tabindex="0" classname="focus:outline-none text-gray-800 dark:text-gray-100 text-xl font-bold mb-3 p-2">
               {props?.name}
             </h4>
             <div className="divide-y divide-gray-400/50">
