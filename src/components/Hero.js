@@ -5,8 +5,8 @@ const Hero = () => {
     <section id="welcome-section" className="bg-gray-800 text-white h-screen" style={{ backgroundImage: `url(${require("../assets/canvas.png")})` }}>
       <div className="flex flex-col items-center justify-center h-full">
         <div className="content-wrapper">
-          <div className="content__text text-5xl">
-            <h1 className="font-raleway">
+          <div className="content__text text-center text-4xl lg:text-5xl ">
+            <h1 className="font-raleway mb-4">
               Hello, My name is <span className="text-[#A61F5B] font-semibold">Cornelius Brooks</span>.
             </h1>
             <h1 className="font-raleway">I'm a full-stack web developer.</h1>

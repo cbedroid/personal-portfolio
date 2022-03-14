@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <footer>
       <section className="bg-gray-600 border-t border-red-600">
-        <div className="container mx-auto">
+        <div className="container mx-auto px-4 lg:px-0">
           <div className="header">
-            <h2 className="text-4xl font-bold text-white">Stay Connected!</h2>
+            <h2 className="text-4xl font-bold text-white border-b-4 border-blue-600 w-4/5 lg:w-1/5 pb-2">Stay Connected!</h2>
           </div>
-          <div className="contact-links text-gray-100 flex justify-between p-4 my-4 mt-16">
+          <div className="contact-links flex flex-col lg:flex-row justify-between c space-y-6 text-gray-100 p-4 my-4 md:mt-16 ">
             <a href="linkedin.com/in/cornelius-brooks" target="_blank" className="btn contact-details" rel="noreferrer">
               <i className="fab fa-linkedin"></i> Linkedin
             </a>
