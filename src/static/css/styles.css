@@ -37,3 +37,14 @@ section {
 
 .contact-details:hover {
   transform: translateY(8px); }
+
+.animated-modal {
+  animation: slideDown 0.75s ease-in-out; }
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-300px);
+    width: 100%; }
+  100% {
+    transform: translateY(0);
+    width: 100%; } }
