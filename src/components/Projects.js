@@ -56,8 +56,8 @@ const Projects = () => {
             <h4>Some of my projects</h4>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
-            {dataArr.map((data) => (
-              <ProjectCard src={data.src} {...data} />
+            {dataArr.map((data, index) => (
+              <ProjectCard key={index} src={data.src} {...data} />
             ))}
           </div>
         </div>

@@ -70,6 +70,7 @@ export default function Nav() {
               </li>
               {links.map((link, index) => (
                 <li
+                  key={index}
                   onClick={() => selected(index + 1)}
                   className={`group  ${
                     style[index + 1] ? "text-white bg-indigo-600" : "text-gray-600 border border-white bg-gray-50"
@@ -110,7 +111,10 @@ export default function Nav() {
             <div className="relative w-full">
               <ul id="list" className={`${dropDown ? "hidden" : "block"} absolute top-2 right-0 font-normal text-base leading-4  w-72 rounded shadow-md`}>
                 {links.map((link, index) => (
-                  <li className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal">
+                  <li
+                    key={index}
+                    className="px-4 py-3 text-gray-600 bg-gray-50 border border-gray-50 focus:outline-none focus:bg-gray-100 hover:bg-gray-100 duration-100 cursor-pointer text-xs leading-3 font-normal"
+                  >
                     <a className="block h-full w-full" href={link?.href}>
                       {link?.name}
                     </a>
