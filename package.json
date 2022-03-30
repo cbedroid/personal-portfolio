@@ -19,12 +19,9 @@
     "dotenv": "^16.0.0",
     "emailjs-com": "^3.2.0",
     "eslint-config-airbnb": "^19.0.4",
-    "fs": "^0.0.1-security",
-    "i": "^0.3.7",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "postcss-cli": "^9.1.0",
-    "pts": "^0.10.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-intersection-observer": "^8.33.1",
@@ -35,7 +32,6 @@
     "react-scripts": "5.0.0",
     "redux": "^4.1.2",
     "serve": "^13.0.2",
-    "styled-component": "^2.8.0",
     "styled-components": "^5.3.5",
     "web-vitals": "^2.1.4"
   },
@@ -70,7 +66,6 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.4",
-    "babel-eslint": "^11.0.0-beta.2",
     "eslint": "^8.11.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jsx-a11y": "^6.5.1",
