@@ -1,7 +1,7 @@
 import React, { useState, createRef } from "react";
 import emailjs from "@emailjs/browser";
-import ThankYouModal from "./ThankYouModal";
 import GoogleRecaptcha from "./subcomponents/GoogleRecaptcha";
+import ThankYouModal from "./ThankYouModal";
 const _ = require("lodash");
 
 const Contact = () => {
@@ -18,7 +18,6 @@ const Contact = () => {
     const recaptchaStatus = recaptchaRef.current.getVerifyStatus();
 
     if (!values || !userID || !serviceID || !templateID || !recaptchaStatus) return;
-    console.log("Handling Contact Form");
 
     // Send email message
     emailjs.init(userID);
@@ -137,7 +136,9 @@ const Contact = () => {
                 ></textarea>
               </div>
             </div>
-            <p className="text-xs leading-3 text-gray-600 mt-4">By clicking submit you agree to our terms of service, privacy policy and how we use data as stated</p>
+            <p className="text-xs leading-3 text-gray-600 mt-4">
+              By clicking submit you agree to our terms of service, privacy policy and how we use data as stated
+            </p>
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 w-full mt-4 md:mt-9 ">
               <input
                 type="submit"
