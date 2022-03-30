@@ -30,16 +30,34 @@ section {
   font-family: "Raleway", sans-serif;
   font-weight: 500; }
 
-.contact-details {
+.short-text {
+  padding-left: 8px !important; }
+
+.readMoreText {
+  cursor: pointer;
+  color: #E25115 !important;
+  margin-left: 4px;
+  font-weight: 600; }
+
+.floating-link {
   font-size: 2.4rem;
   text-shadow: 2px 2px 1px #1f1f1f;
   transition: transform 0.3s ease-out; }
 
-.contact-details:hover {
+.floating-link:hover {
   transform: translateY(8px); }
 
 .animated-modal {
   animation: slideDown 0.75s ease-in-out; }
+
+.twitter-icon:hover {
+  color: #1da1f2; }
+
+.linkedin-icon:hover {
+  color: #0077b5; }
+
+.github-icon:hover {
+  color: #666666; }
 
 @keyframes slideDown {
   0% {
@@ -48,3 +66,16 @@ section {
   100% {
     transform: translateY(0);
     width: 100%; } }
+@keyframes typing {
+  from {
+    width: 0;
+    color: inherit; }
+  to {
+    width: 100%;
+    color: inherit; } }
+@keyframes blinking-cursor {
+  from,
+to {
+    border-color: inherit; }
+  100% {
+    border-color: transparent; } }
