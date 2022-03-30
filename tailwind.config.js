@@ -1,6 +1,10 @@
+/**  JIT V3.0
+ * https://tailwindcss.com/docs/upgrade-guide#configure-content-sources
+ */
+
 module.exports = {
   mode: "jit",
-  purge: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
+  content: ["./public/**/*.html", "./src/**/*.{js,jsx,ts,tsx,vue}"],
   darkMode: "class",
   theme: {
     screens: {
