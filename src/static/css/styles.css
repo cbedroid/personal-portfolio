@@ -1,0 +1,81 @@
+html, body {
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-smoothing: -ms-antialiase;
+  font-smoothing: -webkit-antialiase;
+  -moz-font-smoothing: antialiase;
+  -o-font-smoothing: antialiase;
+  font-smoothing: antialiase;
+  text-rendering: -ms-optimizeLegibility;
+  text-rendering: -webkit-optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden; }
+
+body {
+  font-size: 16px;
+  line-height: 1.5em;
+  font-family: "Roboto", sans-serif;
+  color: #000;
+  background: #fff; }
+
+section {
+  padding-top: 42px;
+  padding-bottom: 42px; }
+
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500; }
+
+.short-text {
+  padding-left: 8px !important; }
+
+.readMoreText {
+  cursor: pointer;
+  color: #E25115 !important;
+  margin-left: 4px;
+  font-weight: 600; }
+
+.floating-link {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out; }
+
+.floating-link:hover {
+  transform: translateY(8px); }
+
+.animated-modal {
+  animation: slideDown 0.75s ease-in-out; }
+
+.twitter-icon:hover {
+  color: #1da1f2; }
+
+.linkedin-icon:hover {
+  color: #0077b5; }
+
+.github-icon:hover {
+  color: #666666; }
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-300px);
+    width: 100%; }
+  100% {
+    transform: translateY(0);
+    width: 100%; } }
+@keyframes typing {
+  from {
+    width: 0;
+    color: inherit; }
+  to {
+    width: 100%;
+    color: inherit; } }
+@keyframes blinking-cursor {
+  from,
+to {
+    border-color: inherit; }
+  100% {
+    border-color: transparent; } }

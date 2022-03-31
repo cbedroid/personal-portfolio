@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/personal-portfolio/static/css/main.582dc250.css",
+    "main.js": "/personal-portfolio/static/js/main.2c137ec8.js",
+    "static/js/787.fb771931.chunk.js": "/personal-portfolio/static/js/787.fb771931.chunk.js",
+    "static/media/nowornever-web-video.webm": "/personal-portfolio/static/media/nowornever-web-video.60b886f4cd0ded6bfbf4.webm",
+    "static/media/tedtext-web-video.webm": "/personal-portfolio/static/media/tedtext-web-video.b75153c7cff341389a8a.webm",
+    "static/media/landing-page-video.webm": "/personal-portfolio/static/media/landing-page-video.85622cd1c3e47e0bf164.webm",
+    "static/media/uber-mobile-video.webm": "/personal-portfolio/static/media/uber-mobile-video.d45b396aa01e0de22eb0.webm",
+    "static/media/surveypage-video.webm": "/personal-portfolio/static/media/surveypage-video.8f41408661b9c4a92a03.webm",
+    "static/media/vue-weather-video.webm": "/personal-portfolio/static/media/vue-weather-video.c39916c311aca4aad164.webm",
+    "static/media/avatar_full.png": "/personal-portfolio/static/media/avatar_full.889fd0f4450aec74bee0.png",
+    "static/media/canvas.png": "/personal-portfolio/static/media/canvas.6779e6e3908d8feb5a36.png",
+    "static/media/avatar_head.png": "/personal-portfolio/static/media/avatar_head.700eec321c326839d8d7.png",
+    "static/media/api_icon.webp": "/personal-portfolio/static/media/api_icon.c0336eb09a01e05d8c71.webp",
+    "static/media/python_icon.webp": "/personal-portfolio/static/media/python_icon.ff6fb13f3cf2eaac4285.webp",
+    "static/media/reactnative_icon.webp": "/personal-portfolio/static/media/reactnative_icon.d5e65f75a1a197d58887.webp",
+    "static/media/react_icon.webp": "/personal-portfolio/static/media/react_icon.c6c730e354d932f2dfa2.webp",
+    "static/media/css_icon.webp": "/personal-portfolio/static/media/css_icon.44b6875d02b1156ff9a4.webp",
+    "static/media/javascript_icon.webp": "/personal-portfolio/static/media/javascript_icon.c03eb03a9ef91168d249.webp",
+    "static/media/default_coding.webp": "/personal-portfolio/static/media/default_coding.ce59d27d72983d704510.webp",
+    "static/media/resume.pdf": "/personal-portfolio/static/media/resume.b2d83becd63892dafed3.pdf",
+    "static/media/docker_icon.webp": "/personal-portfolio/static/media/docker_icon.2ce9b43f741e363e2148.webp",
+    "static/media/postgres_icon.webp": "/personal-portfolio/static/media/postgres_icon.aa26f7cdaab70eb5a510.webp",
+    "static/media/tailwind_icon.webp": "/personal-portfolio/static/media/tailwind_icon.8ba97eb641635b0c2f4c.webp",
+    "static/media/html_icon.webp": "/personal-portfolio/static/media/html_icon.3a4e6983c71d4764de47.webp",
+    "static/media/vue_icon.webp": "/personal-portfolio/static/media/vue_icon.fd0b2c2436acf5ddfb69.webp",
+    "static/media/firebase_icon.webp": "/personal-portfolio/static/media/firebase_icon.36daa7d36e09a37e8182.webp",
+    "static/media/django_icon.webp": "/personal-portfolio/static/media/django_icon.50ea2ddfea35f9c70fb9.webp",
+    "static/media/redux_icon.webp": "/personal-portfolio/static/media/redux_icon.04d5149c7155fb6c00c7.webp",
+    "static/media/expo_icon.webp": "/personal-portfolio/static/media/expo_icon.972867d6e19ab7c846e0.webp",
+    "index.html": "/personal-portfolio/index.html",
+    "main.582dc250.css.map": "/personal-portfolio/static/css/main.582dc250.css.map",
+    "main.2c137ec8.js.map": "/personal-portfolio/static/js/main.2c137ec8.js.map",
+    "787.fb771931.chunk.js.map": "/personal-portfolio/static/js/787.fb771931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.582dc250.css",
+    "static/js/main.2c137ec8.js"
+  ]
+}

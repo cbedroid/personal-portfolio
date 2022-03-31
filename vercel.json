@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/resume(.*)", "destination": "/resume" },
+    { "source": "/(.*)", "destination": "/" }
+  ]
+}
