@@ -1,5 +1,4 @@
 {
-  "homepage": "https://cbedroid.github.io/personal-portfolio",
   "name": "personal-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -36,8 +35,6 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "watch:css": "postcss -w src/static/css/tailwind.css -o src/App.css --verbose ",
