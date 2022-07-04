@@ -13,7 +13,7 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 2018,
+    ecmaVersion: 2021,
     sourceType: 'module',
   },
   plugins: ['react', 'import', 'react-hooks'],
@@ -25,7 +25,7 @@ module.exports = {
   },
   settings: {
     react: {
-      version: 'latest', // "detect" automatically picks the version you have installed.
+      version: '^7.29.4', // "detect" automatically picks the version you have installed.
     },
   },
 }
