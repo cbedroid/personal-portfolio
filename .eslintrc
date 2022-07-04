@@ -49,6 +49,11 @@
   },
   "settings": {
     "import/ignore": ["react"],
+     "import/resolver": {
+    "node": {
+      "extensions": [".js", ".jsx", ".ts", ".tsx"]
+    }
+  },
   "node": {
         "moduleDirectory": [
           "node_modules",

@@ -1,12 +1,12 @@
-import React, { useRef } from 'react'
-import { PropTypes } from 'prop-types'
-import ReadMoreAndLess from 'react-read-more-less'
 import AvatarDrawer from './subcomponents/AvatarDrawer'
 import BorderLinearProgress from './subcomponents/BorderLinearProgress'
 import SocialIcon from './subcomponents/SocialIcon'
-const avatarImage = require('../assets/images/avatar_full.png')
+import { PropTypes } from 'prop-types'
+import React, { useRef } from 'react'
+import ReadMoreAndLess from 'react-read-more-less'
 
 const DeveloperSideBar = ({ icons, text }) => {
+  const avatarImage = '../assets/images/avatar_full.png'
   const readMoreRef = useRef(null)
 
   const skills = [
@@ -51,7 +51,12 @@ const DeveloperSideBar = ({ icons, text }) => {
   return (
     <>
       <div className='about__header bg-gray-700 dark:bg-gray-100 mx-auto w-full rounded-t-md p-4'>
-        <AvatarDrawer image={avatarImage} style={{ width: 100, height: 100 }} title='Cornelius Brooks' subtitle='Full-Stack Web Developer' />
+        <AvatarDrawer
+          image={avatarImage}
+          style={{ width: 100, height: 100 }}
+          title='Cornelius Brooks'
+          subtitle='Full-Stack Web Developer'
+        />
         <SocialIcon
           data={icons}
           containerClass='flex flex-row space-x-3 justify-center my-4'
@@ -66,7 +71,10 @@ const DeveloperSideBar = ({ icons, text }) => {
           </ReadMoreAndLess>
         </p>
 
-        <div id='skill-level' className='flex flex-col space-y-2 border-t-1 border-gray-400 py-8'>
+        <div
+          id='skill-level'
+          className='flex flex-col space-y-2 border-t-1 border-gray-400 py-8'
+        >
           {skills.map(({ title, value, experience }, index) => (
             <BorderLinearProgress
               key={index}
@@ -74,7 +82,12 @@ const DeveloperSideBar = ({ icons, text }) => {
               title={title}
               value={value}
               experience={experience}
-              style={{ height: 10, backgroundColor: '#000', borderRadius: 10, color: '#fff' }}
+              style={{
+                height: 10,
+                backgroundColor: '#000',
+                borderRadius: 10,
+                color: '#fff',
+              }}
               color='secondary'
             />
           ))}
