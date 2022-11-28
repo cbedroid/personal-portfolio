@@ -13,9 +13,22 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="Skill",
             fields=[
-                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
                 ("title", models.CharField(max_length=20)),
-                ("experience", models.PositiveIntegerField(help_text="Number of years of experience")),
+                (
+                    "experience",
+                    models.PositiveIntegerField(
+                        help_text="Number of years of experience"
+                    ),
+                ),
             ],
         ),
     ]

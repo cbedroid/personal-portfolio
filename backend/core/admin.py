@@ -25,7 +25,9 @@ class ProjectAdmin(admin.ModelAdmin):
 
     @staticmethod
     def video_preview(obj):
-        return mark_safe(f'<video src="{obj.video}" width=100 height=135 autoplay muted/>')
+        return mark_safe(
+            f'<video src="{obj.video}" width=100 height=135 autoplay muted/>'
+        )
 
 
 admin.site.register(Skill)

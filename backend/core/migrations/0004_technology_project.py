@@ -13,21 +13,44 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="Technology",
             fields=[
-                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
                 (
                     "name",
-                    models.CharField(help_text="Programming Languages, technologies...etc", max_length=20, unique=True),
+                    models.CharField(
+                        help_text="Programming Languages, technologies...etc",
+                        max_length=20,
+                        unique=True,
+                    ),
                 ),
             ],
         ),
         migrations.CreateModel(
             name="Project",
             fields=[
-                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
                 ("name", models.CharField(max_length=40, unique=True)),
                 ("description", models.TextField(max_length=500)),
                 ("video", models.URLField(help_text="Video preview link for project")),
-                ("link", models.URLField(blank=True, help_text="Project's website link")),
+                (
+                    "link",
+                    models.URLField(blank=True, help_text="Project's website link"),
+                ),
                 ("technology", models.ManyToManyField(to="core.technology")),
             ],
         ),

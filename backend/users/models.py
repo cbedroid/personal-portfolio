@@ -13,7 +13,9 @@ class User(AbstractUser):
     class Meta:
         ordering = ["last_name"]
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, unique=True, editable=False)
+    id = models.UUIDField(
+        primary_key=True, default=uuid.uuid4, unique=True, editable=False
+    )
 
     def __str__(self):
         full_name = self.get_full_name()
@@ -32,16 +34,27 @@ class UserProfile(models.Model):
     description = models.TextField(max_length=1000, default="User profile description")
 
 
-URL_VALIDATOR = RegexValidator(regex=r"^(https?:\/\/|mailto\:).*\.(com|org|net)\.*$/", message="Enter a valid URL")
+URL_VALIDATOR = RegexValidator(
+    regex=r"^(https?:\/\/|mailto\:).*\.(com|org|net)\.*$/", message="Enter a valid URL"
+)
 
 
 class SocialAccount(models.Model):
     title = models.CharField(max_length=60, blank=False, null=False)
     link = models.URLField(blank=False, null=False)
-    icon = models.CharField(max_length=40, blank=True, null=True, help_text=_("Font Awesome v5 icon link. (Optional)"))
-    user = models.ForeignKey(User, related_name="social_account", on_delete=models.CASCADE)
+    icon = models.CharField(
+        max_length=40,
+        blank=True,
+        null=True,
+        help_text=_("Font Awesome v5 icon link. (Optional)"),
+    )
+    user = models.ForeignKey(
+        User, related_name="social_account", on_delete=models.CASCADE
+    )
 
-    is_email = models.BooleanField(default=False, help_text=_("Whether link is an email link"))
+    is_email = models.BooleanField(
+        default=False, help_text=_("Whether link is an email link")
+    )
 
     def save(self, *args, **kwargs):
         self.title = self.title.title()

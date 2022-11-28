@@ -57,7 +57,9 @@ class UserSignUpForm(forms.UserCreationForm):
         try:
             user = User.objects.filter(email__iexact=email)
             if user.exists():
-                raise ValidationError(_("A user is already registered with this e-mail address."))
+                raise ValidationError(
+                    _("A user is already registered with this e-mail address.")
+                )
             return email
         except User.DoesNotExist:
             return email

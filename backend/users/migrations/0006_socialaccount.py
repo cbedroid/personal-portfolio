@@ -16,7 +16,15 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name="SocialAccount",
             fields=[
-                ("id", models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name="ID")),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
                 ("title", models.CharField(max_length=60)),
                 (
                     "link",
@@ -32,11 +40,25 @@ class Migration(migrations.Migration):
                 (
                     "icon",
                     models.CharField(
-                        blank=True, help_text="Font Awesome v5 icon link. (Optional)", max_length=40, null=True
+                        blank=True,
+                        help_text="Font Awesome v5 icon link. (Optional)",
+                        max_length=40,
+                        null=True,
                     ),
                 ),
-                ("is_mailer", models.BooleanField(default=False, help_text="Whether link is an email link")),
-                ("user", models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),
+                (
+                    "is_mailer",
+                    models.BooleanField(
+                        default=False, help_text="Whether link is an email link"
+                    ),
+                ),
+                (
+                    "user",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
         ),
     ]

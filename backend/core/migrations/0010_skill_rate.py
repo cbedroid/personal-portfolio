@@ -13,6 +13,8 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name="skill",
             name="rate",
-            field=models.PositiveIntegerField(default=25, help_text="Experience level from 0 - 100"),
+            field=models.PositiveIntegerField(
+                default=25, help_text="Experience level from 0 - 100"
+            ),
         ),
     ]

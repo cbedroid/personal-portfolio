@@ -17,7 +17,8 @@ class Migration(migrations.Migration):
             field=models.URLField(
                 validators=[
                     django.core.validators.RegexValidator(
-                        message="Enter a fucking valid URL", regex="^(https?:\\/\\/|mailto\\:).*\\.(com|org|net)\\.*$/"
+                        message="Enter a fucking valid URL",
+                        regex="^(https?:\\/\\/|mailto\\:).*\\.(com|org|net)\\.*$/",
                     )
                 ]
             ),

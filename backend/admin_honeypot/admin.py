@@ -5,7 +5,13 @@ from django.utils.translation import gettext_lazy as _
 
 
 class LoginAttemptAdmin(admin.ModelAdmin):
-    list_display = ("username", "get_ip_address", "get_session_key", "timestamp", "get_path")
+    list_display = (
+        "username",
+        "get_ip_address",
+        "get_session_key",
+        "timestamp",
+        "get_path",
+    )
     list_filter = ("timestamp",)
     readonly_fields = ("path", "username", "ip_address", "session_key", "user_agent")
     search_fields = ("username", "ip_address", "user_agent", "path")
@@ -17,12 +23,16 @@ class LoginAttemptAdmin(admin.ModelAdmin):
         return actions
 
     def get_session_key(self, instance):
-        return format_html('<a href="?session_key={sk}">{sk}</a>', sk=instance.session_key)
+        return format_html(
+            '<a href="?session_key={sk}">{sk}</a>', sk=instance.session_key
+        )
 
     get_session_key.short_description = _("Session")
 
     def get_ip_address(self, instance):
-        return format_html('<a href="?ip_address={ip}">{ip}</a>', ip=instance.ip_address)
+        return format_html(
+            '<a href="?ip_address={ip}">{ip}</a>', ip=instance.ip_address
+        )
 
     get_ip_address.short_description = _("IP Address")
 

@@ -41,7 +41,14 @@ ACCOUNT_ALLOW_REGISTRATION = os.getenv("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True
 # allow user to sign in with either username or email
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_AUTHENTICATION_METHOD = "username_email"
-ACCOUNT_USERNAME_BLACKLIST = ["admin", "administrator", "owner", "techsupport", "moderator", "staff"]
+ACCOUNT_USERNAME_BLACKLIST = [
+    "admin",
+    "administrator",
+    "owner",
+    "techsupport",
+    "moderator",
+    "staff",
+]
 
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_REQUIRED = True

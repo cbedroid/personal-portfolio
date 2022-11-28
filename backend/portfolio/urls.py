@@ -16,7 +16,10 @@ else:
     ]
 
 # Apps Api urls
-api_urls = [re_path("api-auth/", include("rest_framework.urls")), re_path(r"^api/", include("api.api_router"))]
+api_urls = [
+    re_path("api-auth/", include("rest_framework.urls")),
+    re_path(r"^api/", include("api.api_router")),
+]
 
 # App base urls
 static_urls = static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

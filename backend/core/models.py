@@ -7,8 +7,12 @@ User = get_user_model()
 
 class Skill(models.Model):
     title = models.CharField(max_length=20)
-    experience = models.PositiveIntegerField(help_text=_("Number of years of experience"))
-    rate = models.PositiveIntegerField(help_text=_("Experience level from 0 - 100"), default=25)
+    experience = models.PositiveIntegerField(
+        help_text=_("Number of years of experience")
+    )
+    rate = models.PositiveIntegerField(
+        help_text=_("Experience level from 0 - 100"), default=25
+    )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):

@@ -23,7 +23,10 @@ class CanReadDashboard(permissions.BasePermission):
         This prevents users from accessing api interface in their browser.
         See: frontend/src/api for axios headers.
        """
-        if request.method in ["GET", "HEAD"] and request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest":
+        if (
+            request.method in ["GET", "HEAD"]
+            and request.META.get("HTTP_X_REQUESTED_WITH") == "XMLHttpRequest"
+        ):
             return True
 
         if request.user.is_superuser:

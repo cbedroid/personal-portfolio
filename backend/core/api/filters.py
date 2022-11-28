@@ -19,7 +19,9 @@ class SkillFilter(filters.FilterSet):
         )
 
     title = filters.CharFilter(
-        lookup_expr="icontains", field_name="title", label="an iexact search on a title of Skill."
+        lookup_expr="icontains",
+        field_name="title",
+        label="an iexact search on a title of Skill.",
     )
 
 
@@ -31,7 +33,11 @@ class TechnologyFilter(filters.FilterSet):
             "name",
         )
 
-    name = filters.CharFilter(lookup_expr="icontains", field_name="name", label="an iexact search on a mame of Skill.")
+    name = filters.CharFilter(
+        lookup_expr="icontains",
+        field_name="name",
+        label="an iexact search on a mame of Skill.",
+    )
 
 
 class ProjectFilter(filters.FilterSet):
@@ -40,11 +46,15 @@ class ProjectFilter(filters.FilterSet):
         fields = ("id", "name", "technology")
 
     name = filters.CharFilter(
-        lookup_expr="icontains", field_name="name", label="an iexact search on a mame of Project."
+        lookup_expr="icontains",
+        field_name="name",
+        label="an iexact search on a mame of Project.",
     )
 
     technology = CharInFilter(
-        lookup_expr="in", field_name="technology__name", label="Classification of type of technology in Project."
+        lookup_expr="in",
+        field_name="technology__name",
+        label="Classification of type of technology in Project.",
     )
 
 
@@ -54,5 +64,7 @@ class ResumeFilter(filters.FilterSet):
         fields = "__all__"
 
     username = filters.CharFilter(
-        lookup_expr="icontains", field_name="user__username", label="an iexact search on a username."
+        lookup_expr="icontains",
+        field_name="user__username",
+        label="an iexact search on a username.",
     )

@@ -20,13 +20,19 @@ class UserFilter(filters.FilterSet):
         )
 
     username = filters.CharFilter(
-        lookup_expr="icontains", field_name="username", label="an iexact search on a username."
+        lookup_expr="icontains",
+        field_name="username",
+        label="an iexact search on a username.",
     )
     first_name = filters.CharFilter(
-        lookup_expr="icontains", field_name="first_name", label="an iexact search on a user's first name."
+        lookup_expr="icontains",
+        field_name="first_name",
+        label="an iexact search on a user's first name.",
     )
     last_name = filters.CharFilter(
-        lookup_expr="icontains", field_name="last_name", label="an iexact search on a user's last name."
+        lookup_expr="icontains",
+        field_name="last_name",
+        label="an iexact search on a user's last name.",
     )
 
 
@@ -36,5 +42,7 @@ class UserProfileFilter(filters.FilterSet):
         fields = ("id", "username")
 
     username = filters.CharFilter(
-        lookup_expr="icontains", field_name="user__username", label="an iexact search on a username."
+        lookup_expr="icontains",
+        field_name="user__username",
+        label="an iexact search on a username.",
     )

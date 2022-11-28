@@ -44,10 +44,14 @@ class Command(BaseCommand):
             #     exit(0)
 
             # Create React Limited Access Token
-            token_user, created = User.objects.get_or_create(username="dummy_token_user")
+            token_user, created = User.objects.get_or_create(
+                username="dummy_token_user"
+            )
             if not created:
                 self.stdout.write(
-                    self.style.SUCCESS(f"Token User `{token_user.username}` already exists"),
+                    self.style.SUCCESS(
+                        f"Token User `{token_user.username}` already exists"
+                    ),
                     ending="\n",
                 )
 
@@ -71,11 +75,15 @@ class Command(BaseCommand):
             #
             #     # Must match react env variable name here
 
-            self.stdout.write(self.style.SUCCESS("Successfully created React API Token"), ending="\n")
+            self.stdout.write(
+                self.style.SUCCESS("Successfully created React API Token"), ending="\n"
+            )
 
         except Exception as e:
             traceback.print_exc()
-            self.stdout.write(self.style.WARNING("Creating Access Token for React Failed"))
+            self.stdout.write(
+                self.style.WARNING("Creating Access Token for React Failed")
+            )
             raise CommandError(e, returncode=1)
 
         self.style.SUCCESS("REACT TOKEN Created Success")

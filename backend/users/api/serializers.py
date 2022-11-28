@@ -43,7 +43,9 @@ class UserProfilePartialSerializer(serializers.ModelSerializer):
 
 
 class UserProfileFullSerializer(serializers.ModelSerializer):
-    social_account = SocialAccountSerializer(source="user.social_account", many=True, default=[], read_only=True)
+    social_account = SocialAccountSerializer(
+        source="user.social_account", many=True, default=[], read_only=True
+    )
 
     class Meta:
         model = UserProfile

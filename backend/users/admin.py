@@ -23,7 +23,8 @@ class UserProfileAdmin(admin.ModelAdmin):
 
     def avatar_preview(self, obj):
         image = (
-            obj.avatar or "https://artscimedia.case.edu/wp-content/uploads/sites/79/2016/12/14205134/no-user-image.gif"
+            obj.avatar
+            or "https://artscimedia.case.edu/wp-content/uploads/sites/79/2016/12/14205134/no-user-image.gif"
         )
         return mark_safe(f'<img src="{image}" width=60 height=55/>')
 

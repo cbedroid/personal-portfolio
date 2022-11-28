@@ -17,7 +17,8 @@ class Migration(migrations.Migration):
             model_name="resume",
             name="created_at",
             field=models.DateTimeField(
-                auto_now_add=True, default=datetime.datetime(2022, 10, 11, 6, 9, 29, 68917, tzinfo=utc)
+                auto_now_add=True,
+                default=datetime.datetime(2022, 10, 11, 6, 9, 29, 68917, tzinfo=utc),
             ),
             preserve_default=False,
         ),

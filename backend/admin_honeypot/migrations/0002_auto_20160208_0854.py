@@ -15,6 +15,8 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name="loginattempt",
             name="ip_address",
-            field=models.GenericIPAddressField(blank=True, null=True, verbose_name="ip address"),
+            field=models.GenericIPAddressField(
+                blank=True, null=True, verbose_name="ip address"
+            ),
         ),
     ]
