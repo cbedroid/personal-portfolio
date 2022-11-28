@@ -1,0 +1,19 @@
+# VCS
+**/.git
+**/.svn
+**/.hg
+
+**/node_modules
+**/*.d.ts
+
+# Actual ignores
+storybook-static/
+build/
+dist/
+*.snap
+*.py
+coverage/
+**/v1.backbone/**/*.*
+**/templates/**/*.html
+**/static/admin/**/*.min.*
+**/docker/**/*.*
