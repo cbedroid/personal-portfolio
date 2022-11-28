@@ -1,0 +1,46 @@
+[
+  {
+    "model": "users.socialaccount",
+    "pk": 1,
+    "fields": {
+      "title": "Linkedin",
+      "link": "http://linkedin.com/in/cornelius-brooks",
+      "icon": "fab fa-linkedin",
+      "user": "e89383c3-2956-4bdd-9cf1-94c479815259",
+      "is_email": false
+    }
+  },
+  {
+    "model": "users.socialaccount",
+    "pk": 2,
+    "fields": {
+      "title": "Github",
+      "link": "https://github.com/cbedroid",
+      "icon": "fab fa-github",
+      "user": "e89383c3-2956-4bdd-9cf1-94c479815259",
+      "is_email": false
+    }
+  },
+  {
+    "model": "users.socialaccount",
+    "pk": 3,
+    "fields": {
+      "title": "Twitter",
+      "link": "https://twitter.com/cbedroid",
+      "icon": "fab fa-twitter",
+      "user": "e89383c3-2956-4bdd-9cf1-94c479815259",
+      "is_email": false
+    }
+  },
+  {
+    "model": "users.socialaccount",
+    "pk": 4,
+    "fields": {
+      "title": "Email Me",
+      "link": "http://cbedroid1614@gmail.com",
+      "icon": "fas fa-at",
+      "user": "e89383c3-2956-4bdd-9cf1-94c479815259",
+      "is_email": true
+    }
+  }
+]

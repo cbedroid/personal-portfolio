@@ -1,0 +1,283 @@
+[
+  {
+    "model": "core.skill",
+    "pk": 1,
+    "fields": {
+      "title": "Python",
+      "experience": 7,
+      "rate": 92,
+      "user": "701a28fa-7d35-492f-88d9-f4fc3af82a57"
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 2,
+    "fields": {
+      "title": "React",
+      "experience": 4,
+      "rate": 90,
+      "user": "701a28fa-7d35-492f-88d9-f4fc3af82a57"
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 3,
+    "fields": {
+      "title": "Django",
+      "experience": 6,
+      "rate": 90,
+      "user": "701a28fa-7d35-492f-88d9-f4fc3af82a57"
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 4,
+    "fields": {
+      "title": "Javascript",
+      "experience": 6,
+      "rate": 85,
+      "user": "701a28fa-7d35-492f-88d9-f4fc3af82a57"
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 5,
+    "fields": {
+      "title": "Restful API",
+      "experience": 4,
+      "rate": 85,
+      "user": "701a28fa-7d35-492f-88d9-f4fc3af82a57"
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 6,
+    "fields": {
+      "title": "DevOps",
+      "experience": 3,
+      "rate": 75,
+      "user": "701a28fa-7d35-492f-88d9-f4fc3af82a57"
+    }
+  },
+  {
+    "model": "core.skill",
+    "pk": 7,
+    "fields": {
+      "title": "Database ORM",
+      "experience": 4,
+      "rate": 80,
+      "user": "701a28fa-7d35-492f-88d9-f4fc3af82a57"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 1,
+    "fields": {
+      "name": "HTML",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/html_icon.webp",
+      "link": "https://www.w3schools.com/html/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 2,
+    "fields": {
+      "name": "CSS",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/css_icon.webp",
+      "link": "https://www.w3schools.com/css/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 3,
+    "fields": {
+      "name": "Javascript",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/javascript_icon.webp",
+      "link": "https://www.javascript.com/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 4,
+    "fields": {
+      "name": "React",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/react_icon.webp",
+      "link": "https://reactjs.org/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 5,
+    "fields": {
+      "name": "NodeJs",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/Nodejs.webp",
+      "link": "https://nodejs.org/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 6,
+    "fields": {
+      "name": "Django",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/django_icon.webp",
+      "link": "https://www.djangoproject.com/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 7,
+    "fields": {
+      "name": "Docker",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/docker_icon.webp",
+      "link": "https://www.docker.com/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 8,
+    "fields": {
+      "name": "Postgres",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/postgres_icon.webp",
+      "link": "https://www.postgresql.org/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 9,
+    "fields": {
+      "name": "Expo",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/expo_icon.webp",
+      "link": "https://expo.io/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 10,
+    "fields": {
+      "name": "VueJs",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/vue_icon.webp",
+      "link": "https://vuejs.org/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 11,
+    "fields": {
+      "name": "Sass",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/sass.webp",
+      "link": "https://sass-lang.com/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 12,
+    "fields": {
+      "name": "React Native",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/reactnative_icon.webp",
+      "link": "https://reactnative.dev/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 13,
+    "fields": {
+      "name": "FireBase",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/firebase_icon.webp",
+      "link": "https://firebase.google.com/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 14,
+    "fields": {
+      "name": "TailwindCss",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/tailwind_icon.webp",
+      "link": "https://tailwindcss.com/"
+    }
+  },
+  {
+    "model": "core.technology",
+    "pk": 15,
+    "fields": {
+      "name": "Python",
+      "image": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/python_icon.webp",
+      "link": "https://www.python.org/"
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 1,
+    "fields": {
+      "name": "Truu Tee's",
+      "description": "This website serves as the landing page for a fictional online store. Users may browse products, place items in their shopping basket, and complete their transaction using stripe online checkout payment system.",
+      "video": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/videos/landing-page-video.webm",
+      "link": "https://cbedroid.github.io/LandingPage/",
+      "technology": [1, 2, 3]
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 2,
+    "fields": {
+      "name": "Software Engineer Survey",
+      "description": "A single-page web application with HTML, JS, and CSS. This application comprises of a form survey that users may utilize to answer questions regarding their experiences as software engineers and their jobs within the industry.",
+      "video": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/videos/surveypage-video.webm",
+      "link": "https://cbedroid.github.io/Survey-Page/",
+      "technology": [1, 2, 3]
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 3,
+    "fields": {
+      "name": "TedText - Texting Educational Data",
+      "description": "A fully functional web application and Restful API with a Django backend and React frontend. This application allows educators to measure learning effectiveness and monitor the progress of their students by creating educational assessments for students to take via text messaging.",
+      "video": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/videos/tedtext-web-video.webm",
+      "link": "",
+      "technology": [1, 2, 3, 4, 6, 7, 8, 11, 15]
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 4,
+    "fields": {
+      "name": "NoworNever Music",
+      "description": "A platform for sharing music and showcasing talent for musicians.\r\nIn addition to searching for music by artist, genre, and title, users can register for an account and upload songs.\r\nThis website was built using technologies including Django, Python, and Docker.",
+      "video": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/videos/nowornever-web-video.webm",
+      "link": "https://countrycuzzins.herokuapp.com/",
+      "technology": [1, 2, 3, 4, 6, 7, 8, 11, 15]
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 5,
+    "fields": {
+      "name": "Uber Passenger App",
+      "description": "An Uber Passenger App clone built using the latest version of React Native, Redux, and Firebase. Compatible with both IOS and Android devices, this application consists of a fully functional authentication system that allows users the ability to create an account, log in, and log out. This app uses Google API services such as Google Maps, Google Place, and Directional API that allows a user the ability to safely request a ride and pick spots to their pin-point location. Uber allows users to view the status of their ride and saved ride history.",
+      "video": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/videos/uber-mobile-video.webm",
+      "link": "https://github.com/cbedroid/Uber-Clone",
+      "technology": [3, 4, 9, 12, 13, 14]
+    }
+  },
+  {
+    "model": "core.project",
+    "pk": 6,
+    "fields": {
+      "name": "Vue Weather App",
+      "description": "A weather application that collects real-time forecasts and weather alerts from OpenWeatherMap API services using modern es6 Javascript and VueJs.\r\nWith this software, users can search for the weather forecast for their city, state, or zip code on a weekly, daily, or hourly basis.",
+      "video": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/videos/vue-weather-video.webm",
+      "link": "https://cbedroid.github.io/vue-weather-app/",
+      "technology": [10, 3]
+    }
+  },
+  {
+    "model": "core.resume",
+    "pk": 1,
+    "fields": {
+      "url": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/resume.pdf",
+      "user": "701a28fa-7d35-492f-88d9-f4fc3af82a57",
+      "created_at": "2022-10-11T06:09:29.068Z",
+      "updated_at": "2022-10-11"
+    }
+  }
+]
