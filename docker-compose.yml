@@ -1,0 +1,71 @@
+# Docker compose for Local Development
+version: "3.3"
+services:
+  django:
+    restart: always
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: dev-django
+    command: gunicorn portfolio.wsgi:application --worker-tmp-dir /dev/shm --workers=2 --threads=4 --worker-class=gthread --log-file=- --bind 0.0.0.0:8000
+    environment:
+      - REDIS_URL=redis://redis:6379/
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./backend/.env.dev
+    volumes:
+      - static:/srv/app/backend/static
+      - media:/srv/app/backend/media
+    depends_on:
+      - db
+      - redis
+
+  db:
+    restart: always
+    image: postgres:9.6.22-buster
+    container_name: dev-db
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./backend/.env.dev
+
+  redis:
+    image: redis:alpine
+    container_name: dev-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_cache:/data
+
+  react:
+    restart: always
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: dev-react
+    command: npm run start
+    env_file:
+      - ./frontend/.env.dev
+    ports:
+      - "3000:3000"
+    depends_on:
+      - django
+  nginx:
+    build:
+      context: ./nginx/dev
+      dockerfile: Dockerfile
+    container_name: dev-nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - static:/srv/app/backend/static
+      - media:/srv/app/backend/media
+    depends_on:
+      - django
+      - db
+
+volumes:
+  redis_cache:
+  media:
+  static:
