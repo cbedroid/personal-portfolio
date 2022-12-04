@@ -3,7 +3,7 @@ from django.conf import settings
 from django.urls import path
 from rest_framework.routers import DefaultRouter, SimpleRouter
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
-from users.api.views import UserProfileViewSet, UserViewSet
+from users.api.views import SocialAccountViewSet, UserProfileViewSet, UserViewSet
 
 if settings.DEBUG:
     router = DefaultRouter()
@@ -13,6 +13,7 @@ else:
 # users api urls
 router.register("users", UserViewSet, basename="user")
 router.register("userprofiles", UserProfileViewSet, basename="userprofile")
+router.register("social_accounts", SocialAccountViewSet, basename="social_account")
 
 # core api url
 router.register("projects", ProjectView, basename="project")

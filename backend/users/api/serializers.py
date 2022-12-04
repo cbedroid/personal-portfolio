@@ -12,7 +12,7 @@ class SocialAccountSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = SocialAccount
-        exclude = ("is_email", "user")
+        exclude = ("is_email",)
 
     @staticmethod
     def get_link(model):

@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
 from django_filters import rest_framework as filters
-from users.models import UserProfile
+from users.models import SocialAccount, UserProfile
 
 User = get_user_model()
 
@@ -46,3 +46,12 @@ class UserProfileFilter(filters.FilterSet):
         field_name="user__username",
         label="an iexact search on a username.",
     )
+
+
+class SocialAccountFilter(filters.FilterSet):
+    class Meta:
+        model = SocialAccount
+        fields = (
+            "title",
+            "user",
+        )

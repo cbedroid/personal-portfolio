@@ -3,14 +3,15 @@ from core.api.permissions import CanReadDashboard
 from django.contrib.auth import get_user_model
 from django_filters import rest_framework as filters
 from rest_framework import status, viewsets
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticatedOrReadOnly
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from ..models import UserProfile
-from .filters import UserFilter, UserProfileFilter
+from ..models import SocialAccount, UserProfile
+from .filters import SocialAccountFilter, UserFilter, UserProfileFilter
 from .serializers import (
+    SocialAccountSerializer,
     UserProfileFullSerializer,
     UserProfilePartialSerializer,
     UserSerializer,
@@ -29,7 +30,6 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 class UserProfileViewSet(viewsets.ModelViewSet):
-    # serializer_class = UserProfilePartialSerializer
     pagination_class = VerbosePagination
     permission_classes = [CanReadDashboard]
     filter_backends = (filters.DjangoFilterBackend,)
@@ -40,6 +40,15 @@ class UserProfileViewSet(viewsets.ModelViewSet):
         if self.request.method == "GET":
             return UserProfileFullSerializer
         return UserProfilePartialSerializer
+
+
+class SocialAccountViewSet(viewsets.ModelViewSet):
+    serializer_class = SocialAccountSerializer
+    pagination_class = VerbosePagination
+    permission_classes = [IsAuthenticatedOrReadOnly, CanReadDashboard]
+    filter_backends = (filters.DjangoFilterBackend,)
+    filterset_class = SocialAccountFilter
+    queryset = SocialAccount.objects.all()
 
 
 class BlacklistTokenUpdateView(APIView):
