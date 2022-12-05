@@ -15,16 +15,17 @@ else:
         re_path(rf"^{settings.ADMIN_URL.lstrip('/')}/", admin.site.urls),
     ]
 
-# Apps Api urls
+# Rest framework and Apps Api urls
 api_urls = [
     re_path("api-auth/", include("rest_framework.urls")),
     re_path(r"^api/", include("api.api_router")),
 ]
 
-# App base urls
+# Static and media urls
 static_urls = static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 static_urls += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
+# App base urls
 base_urls = api_urls + []
 
 urlpatterns = admin_urls + base_urls + static_urls
