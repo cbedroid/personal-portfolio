@@ -18,15 +18,6 @@ class Command(BaseCommand):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-    def add_arguments(self, parser):
-        parser.add_argument(
-            "--env_prefix",
-            type=str,
-            nargs="?",
-            default="REACT_APP_API_TOKEN",
-            help="React environment variable prefix. e.g. `REACT_APP_<variable>`",
-        )
-
     def handle(self, *args, **options):
         fixtures = [
             "core/fixtures/core.json",
