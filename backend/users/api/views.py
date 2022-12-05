@@ -23,7 +23,7 @@ User = get_user_model()
 class UserViewSet(viewsets.ModelViewSet):
     serializer_class = UserSerializer
     pagination_class = VerbosePagination
-    permission_classes = [CanReadDashboard]
+    permission_classes = [IsAuthenticatedOrReadOnly, CanReadDashboard]
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_class = UserFilter
     queryset = User.objects.all()
@@ -31,7 +31,7 @@ class UserViewSet(viewsets.ModelViewSet):
 
 class UserProfileViewSet(viewsets.ModelViewSet):
     pagination_class = VerbosePagination
-    permission_classes = [CanReadDashboard]
+    permission_classes = [IsAuthenticatedOrReadOnly, CanReadDashboard]
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_class = UserProfileFilter
     queryset = UserProfile.objects.all()
@@ -45,7 +45,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
 class SocialAccountViewSet(viewsets.ModelViewSet):
     serializer_class = SocialAccountSerializer
     pagination_class = VerbosePagination
-    permission_classes = [IsAuthenticatedOrReadOnly, CanReadDashboard]
+    permission_classes = [CanReadDashboard]
     filter_backends = (filters.DjangoFilterBackend,)
     filterset_class = SocialAccountFilter
     queryset = SocialAccount.objects.all()
