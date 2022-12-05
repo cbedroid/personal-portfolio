@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 import { DateTime } from "luxon";
 import tw from "tailwind-styled-components";
 
-import { ResumeEntity } from "../types";
+import { ResumeEntity } from "../../../types";
 
 type TitleProp = {
   color?: string;

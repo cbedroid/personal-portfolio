@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Avatar, AvatarGroup, Skeleton } from "@mui/material";
 import { debounce } from "lodash";
 
-import { ProjectEntity, TechnologyEntity } from "../../types";
+import { ProjectEntity, TechnologyEntity } from "../../../types";
 
 type Props = {
   technologies: TechnologyEntity[];
@@ -47,22 +47,21 @@ const TechAvatar = ({ technologies, project }: Props) => {
     >
       {!!technologies
         ? technologies?.map((technology) => (
-            <div
-              className="hover:animate-bounce transition ease-in-out duration-300"
-              key={`${project}-technology-${technology.name}`}
-            >
-              <a
-                href={technology.link}
-                target="_blank"
-                rel="noreferrer"
-                title={technology.name}
-              >
-                <Avatar
-                  className="ring-2 ring-gray-700 dark:ring-gray-100 "
-                  alt={technology.name}
-                  src={technology.image}
-                />
-              </a>
+            <div className="group" key={`${project}-technology-${technology.name}`}>
+              <div className="group-hover:animate-bounce transition ease-in-out duration-300">
+                <a
+                  href={technology.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  title={technology.name}
+                >
+                  <Avatar
+                    className="ring-2 ring-gray-800 dark:ring-gray-100 shadow-sm group-hover:drop-shadow-xl"
+                    alt={technology.name}
+                    src={technology.image}
+                  />
+                </a>
+              </div>
             </div>
           ))
         : [...Array(3)].map((_, i) => (

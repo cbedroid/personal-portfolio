@@ -6,7 +6,7 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 import "./App.css";
 import HomePage from "./containers/HomePage";
-import ResumePage from "./containers/ResumePage";
+import ResumePage from "./containers/resume/ResumePage";
 
 const queryClient = new QueryClient();
 
@@ -29,9 +29,6 @@ const theme = createTheme({
 });
 
 function App() {
-  // eslint-disable-next-line no-console
-  console.log("LOCATION", window.location);
-
   return (
     <ThemeProvider theme={theme}>
       <ErrorBoundary>

@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
-import ContactForm from "contact/components/ContactForm";
+import ContactForm from "containers/contact/components/ContactForm";
 
-import { ContactFormFields } from "../types";
+import { ContactFormFields } from "../../types";
 import ThankYouModal from "./components/ThankYouModal";
 
 const Contact = () => {

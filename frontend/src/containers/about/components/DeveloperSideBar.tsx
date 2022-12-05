@@ -4,9 +4,9 @@ import { Skeleton } from "@mui/material";
 import TextEllipsis from "components/ui/TextEllipsis";
 import { sortBy } from "lodash";
 
-import IconLink from "../../components/IconLink";
-import { useGetSkillsQuery } from "../../queries";
-import { UserEntity } from "../../types";
+import IconLink from "../../../components/IconLink";
+import { useGetSkillsQuery } from "../../../queries";
+import { UserEntity } from "../../../types";
 import AvatarDrawer from "./AvatarDrawer";
 import BorderLinearProgress from "./BorderLinearProgress";
 

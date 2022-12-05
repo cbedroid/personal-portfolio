@@ -8,8 +8,8 @@ import countryList from "react-select-country-list";
 import tw from "tailwind-styled-components";
 import * as yup from "yup";
 
-import Selector from "../../components/ui/filters/Selector";
-import { ContactFormFields } from "../../types";
+import Selector from "../../../components/ui/filters/Selector";
+import { ContactFormFields } from "../../../types";
 import GoogleRecaptcha from "./GoogleRecaptcha";
 
 type Props = {

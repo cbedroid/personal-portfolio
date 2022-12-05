@@ -5,8 +5,8 @@ import classNames from "classnames";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 
-import ZoomButtons from "../components/ZoomButtons";
-import { isMobile } from "../utils";
+import ZoomButtons from "../../../components/ZoomButtons";
+import { isMobile } from "../../../utils";
 
 type Props = {
   file: Blob | string;

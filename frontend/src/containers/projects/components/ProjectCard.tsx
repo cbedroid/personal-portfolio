@@ -5,7 +5,7 @@ import Chip from "@mui/material/Chip";
 import classNames from "classnames";
 import tw from "tailwind-styled-components";
 
-import { ProjectEntity } from "../../types";
+import { ProjectEntity } from "../../../types";
 import TechAvatars from "./TechAvatars";
 
 const CardFooter = tw.div`

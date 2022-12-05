@@ -1,8 +1,9 @@
 import React from "react";
 
 import { Skeleton } from "@mui/material";
-import ProjectCard from "projects/components/ProjectCard";
 import { useGetProjectsQuery } from "queries";
+
+import ProjectCard from "./components/ProjectCard";
 
 const Projects = () => {
   const projectsQuery = useGetProjectsQuery();

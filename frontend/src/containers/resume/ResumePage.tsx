@@ -2,10 +2,10 @@ import React, { useMemo } from "react";
 
 import Box from "@mui/material/Box";
 
-import Loader from "../components/ui/Loader";
-import { useGetResumesQuery } from "../queries";
-import Resume from "../resume/Resume";
-import ResumeTitle from "../resume/ResumeTitle";
+import Loader from "../../components/ui/Loader";
+import { useGetResumesQuery } from "../../queries";
+import Resume from "./components/Resume";
+import ResumeTitle from "./components/ResumeTitle";
 
 const ResumePage = () => {
   const resumeQuery = useGetResumesQuery({ username: "cbedroid" });

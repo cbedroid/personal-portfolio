@@ -2,8 +2,8 @@ import React, { useMemo } from "react";
 
 import { Skeleton } from "@mui/material";
 import Slide from "@mui/material/Slide";
-import DeveloperSideBar from "about/components/DeveloperSideBar";
 import Image from "components/ui/Image";
+import DeveloperSideBar from "containers/about/components/DeveloperSideBar";
 import { useGetUsersQuery } from "queries";
 import { useInView } from "react-intersection-observer";
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import useKeyEvent from "../../hooks/useKeyEvent";
+import useKeyEvent from "../../../hooks/useKeyEvent";
 
 type Props = {
   isOpen: boolean;
