@@ -1,4 +1,10 @@
-import React, { useLayoutEffect, useMemo, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useMemo,
+  useState,
+} from "react";
 
 // @ts-ignore
 import ParticleBackground from "react-particle-backgrounds";
@@ -9,6 +15,21 @@ type Props = {
 
 const ParticleAnimation = ({ children }: Props) => {
   const [numOfParticles, setNumOfParticles] = useState<number>(150);
+  const [color, setColor] = useState<string>("#94ecbe");
+
+  const getRandomColor = useCallback(() => {
+    const colors = [
+      "#94ecbe",
+      "#dded2a",
+      "#8eed2a",
+      "#335cf4",
+      "#ff133c",
+      "#4fecde",
+      "#d23cd4",
+    ];
+    const randomNumber = Math.floor(Math.random() * colors.length);
+    return colors[randomNumber];
+  }, []);
 
   useLayoutEffect(() => {
     window.addEventListener("resize", () => {
@@ -17,7 +38,15 @@ const ParticleAnimation = ({ children }: Props) => {
     });
 
     return () => window.removeEventListener("resize", () => null);
-  }, []);
+  }, [getRandomColor, color]);
+
+  useEffect(() => {
+    const timeout = setInterval(() => {
+      setColor(getRandomColor());
+    }, 3000);
+
+    return () => clearInterval(timeout);
+  });
 
   const settings = useMemo(
     () => ({
@@ -25,13 +54,13 @@ const ParticleAnimation = ({ children }: Props) => {
         canvasFillSpace: true,
         width: "100%",
         height: "100%",
-        useBouncyWalls: false,
+        useBouncyWalls: true,
       },
       particle: {
         particleCount: numOfParticles,
-        color: "#94ecbe",
+        color: color,
         minSize: 2,
-        maxSize: 5,
+        maxSize: 10,
       },
       velocity: {
         directionAngle: 0,
@@ -45,7 +74,7 @@ const ParticleAnimation = ({ children }: Props) => {
         opacityTransitionTime: 3000,
       },
     }),
-    [numOfParticles],
+    [numOfParticles, color],
   );
 
   return (
