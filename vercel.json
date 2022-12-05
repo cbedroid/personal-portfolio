@@ -2,5 +2,8 @@
   "rewrites": [
     { "source": "/resume(.*)", "destination": "/resume" },
     { "source": "/(.*)", "destination": "/" }
-  ]
+  ],
+  "git": {
+    "deploymentEnabled": false
+  }
 }

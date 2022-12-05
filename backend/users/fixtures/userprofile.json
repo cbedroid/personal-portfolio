@@ -1,0 +1,11 @@
+[
+  {
+    "model": "users.userprofile",
+    "pk": 1,
+    "fields": {
+      "user": "d71e1d2d-e66f-429d-98e8-1cf234f23e34",
+      "avatar": "https://raw.githubusercontent.com/cbedroid/personal-portfolio/docs-storage/content/images/avatar_full.png",
+      "description": "Hello, my name is Cornelius Brooks, known as Cbedroid. I am an Innovative, task-driven professional Senior Software Engineer with over 5+ years of experience in Full Stack Web Developer, fundamental front-end languages, and server-side languages. A creative thinker that brings innovative solutions to help solve any arriving problems. Equipped with a record of success in consistently identifying and providing the technological needs of companies through ingenious innovation. Proficient in developing databases such as Postgres, MySQL, and MongoDB, creating servers and databases for functionality and designing, developing restful APIs, creating user interfaces, writing and testing codes, and troubleshooting simple/complex issues."
+    }
+  }
+]

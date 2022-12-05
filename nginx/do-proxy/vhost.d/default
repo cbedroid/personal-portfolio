@@ -1,0 +1,9 @@
+location /static/ {
+  alias /srv/app/backend/static/;
+  add_header Access-Control-Allow-Origin *;
+}
+
+location /media/ {
+  alias /srv/app/backend/media/;
+  add_header Access-Control-Allow-Origin *;
+}

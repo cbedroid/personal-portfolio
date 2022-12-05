@@ -1,0 +1,12 @@
+# Actual ignores
+build/
+config/
+coverage/
+dist/
+node_modules
+node_modules/*
+**/node_modules
+**/node_modules/**
+storybook-static/
+v1.backbone/
+**/static/admin/**/*.min.*

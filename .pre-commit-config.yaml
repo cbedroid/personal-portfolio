@@ -1,31 +1,91 @@
 default_stages: [commit]
 repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: trailing-whitespace
+        exclude: >
+          (?x)^(
+                  tests/|
+              )$
+      - id: check-json
+      - id: end-of-file-fixer
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.5.0
+    hooks:
+      - id: check-ast
+
+  - repo: https://github.com/psf/black
+    rev: 22.6.0
+    hooks:
+      - id: black
+        args: [--line-length=88]
+        exclude: >
+          (?x)^(
+                  .github/
+              )$
+  - repo: https://github.com/pycqa/flake8
+    rev: 3.9.0
+    hooks:
+      - id: flake8
+        args: [--max-line-length=120]
+
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.8.0
+    hooks:
+      - id: isort
+
   - repo: https://github.com/pre-commit/mirrors-prettier
     rev: v2.6.2 # Use the sha or tag you want to point at
     hooks:
       - id: prettier
         args:
-          - --config=.prettierrc.json
-          - --ignore-path=prettierignore
+          - --config=./frontend/.prettierrc.json
+          - --ignore-path=./frontend/.prettierignore
           - --write
         additional_dependencies:
           - prettier@2.6.2
-          - '@trivago/prettier-plugin-sort-imports@3.2.0'
+          - "@trivago/prettier-plugin-sort-imports@3.2.0"
 
   - repo: local
     hooks:
+      - id: django-migrations-check
+        stages: [push]
+        name: Check for missing django migrations.
+        entry: bash -c 'exec bash -c "./backend/manage.py makemigrations --check --dry-run"'
+        language: python
+        language_version: python3
+        types: [python]
+        pass_filenames: false
+        additional_dependencies:
+          - requirement.txt
+
       - id: eslint
         stages: [commit]
         name: Run eslint against all files
-        entry: node_modules/.bin/eslint
+        entry: ./frontend/node_modules/.bin/eslint
         language: node
-        language_version: 14.19.1
+        language_version: 14.15.1
         types: [file]
         files: \.[jt]sx?$
-        exclude: node_modules/
+        exclude: ./frontend/node_modules/
         args:
-          - --config=.eslintrc.js
-          - --ignore-path=.eslintignore
+          - --config=./frontend/.eslintrc.json
+          - --ignore-path=./frontend/.eslintignore
           - --fix
         additional_dependencies:
           - react-script
+
+      - id: typescript
+        stages: [push]
+        name: Run typescript checks against code.
+        entry: >
+          ./frontend/node_modules/.bin/tsc
+          --project ./frontend/tsconfig.json
+          --noEmit
+        language: node
+        language_version: 14.15.1
+        types: [file]
+        files: \.[jt]sx?$
+        exclude: ./frontend/node_modules/
+        pass_filenames: false
