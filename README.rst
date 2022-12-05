@@ -17,9 +17,14 @@ Tools and Skills
 ----------------
 Here are some of the tools and skills used to build this web app.
 
-- `ReactJS <https://reactjs.org/>`_ - A JavaScript library for building user interfaces.
+- `Python <https://www.python.org/>`_ - is a programming language that lets you work quickly and integrate systems more effectively.
+- `Django <https://www.djangoproject.com/>`_ -  is a high-level Python web framework that encourages rapid development and clean, pragmatic design.
+- `Django REST framework <https://www.django-rest-framework.org/>`_ - framework is a powerful and flexible toolkit for building Web APIs.
+- `NGINX <https://www.nginx.com/>`_ - is an HTTP and reverse proxy server, a mail proxy server, and a generic TCP/UDP proxy server.
+- `Docker <https://www.docker.com/>`_ - is a software platform that use OS-level virtualization to build, test, and deploy software in packages called containers.
+- `ReactJS <https://reactjs.org/>`_ - A JavaScript library for building scalable user interfaces.
 - `Javascript ES12 <https://dev.to/naimlatifi5/ecmascript-2021-es12-new-features-2l67>`_ - is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
-- `Typescript <https://www.typescriptlang.org/docs/>`_ - is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale
+- `Typescript <https://www.typescriptlang.org/docs/>`_ - is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 - `Redux-toolkit <https://redux-toolkit.js.org/>`_ - s the official Redux tool, opinionated, with batteries for efficient Redux development.
 - `React-Query <https://tanstack.com/query/v4/docs/overview>`_ - A library that makes fetching, caching, synchronizing and updating server state in your React applications a breeze.
 - `React Router <https://reacttraining.com/react-router/web/>`_ -  Client side routing that allows your app to update the URL from a link click without making another request.
