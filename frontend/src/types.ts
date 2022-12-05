@@ -21,6 +21,7 @@ export type SocialAccountEntity = {
   title: string;
   link: string;
   icon?: string;
+  user: string;
 };
 
 export type UserProfileEntity = {
