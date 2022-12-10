@@ -2,10 +2,10 @@
 
 pip install -r requirements.dev.txt
 #python manage.py collectstatic --noinput
-python manage.py makemigrations
-python manage.py migrate
-python manage.py createsuperuser --noinput
-python manage.py create_superuser_fixtures --noinput
+# python manage.py makemigrations
+# python manage.py migrate
+# python manage.py createsuperuser --noinput
+# python manage.py create_superuser_fixtures --noinput
 
 
 if [ "$run_fixtures" = "true" ];
