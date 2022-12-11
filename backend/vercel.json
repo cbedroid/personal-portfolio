@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "portfolio/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+      "src": ".vercel_build.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "static"
+      }
+    }
+  ],
+  "rewrites": [
+    { "source": "/static/(.*)", "destination": "static/$1" },
+    { "source": "/(.*)", "destination": "portfolio/wsgi.py" }
+  ],
+  "git": { "deploymentEnabled": false }
+}

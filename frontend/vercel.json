@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "redirects": [{ "source": "/api(.*)", "destination": "https://cbedroid-portfolio-api.vercel.app/api/$1" }],
+  "rewrites": [
+    { "source": "/resume(.*)", "destination": "/resume/$1" },
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "git": {
+    "deploymentEnabled": false
+  }
+}

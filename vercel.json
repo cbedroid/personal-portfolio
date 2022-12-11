@@ -1,5 +1,24 @@
 {
+  "version": 2,
+  "builds": [
+    {
+      "src": "/backend/portfolio/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+      "src": "/backend/.vercel_build.sh",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    },
+    {
+      "src": "/frontend/.vercel_build.sh",
+      "use": "@vercel/node"
+    }
+  ],
   "rewrites": [
+    { "source": "/admin(.*)", "destination": "/admin" },
+    { "source": "/api(.*)", "destination": "/api" },
     { "source": "/resume(.*)", "destination": "/resume" },
     { "source": "/(.*)", "destination": "/" }
   ],
