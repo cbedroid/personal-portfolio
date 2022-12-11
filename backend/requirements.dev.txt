@@ -1,5 +1,4 @@
 argon2-cffi==21.3.0
-black==22.8.0
 Django==4.0.7
 django-celery-beat==2.3.0
 django-compressor==4.1
@@ -7,18 +6,11 @@ django-cors-headers==3.13.0
 django-enum-choices==2.1.4
 django-extensions==3.2.1
 django-filter==22.1
-django-ipware==4.0.2
 django-jazzmin==2.5.0
-django-redis==5.2.0
 django-simple-history==3.1.1
 djangorestframework-simplejwt==5.2.0
-flake8-isort==4.2.0
 gunicorn==20.1.0
 ipython==8.5.0
-pip-chill==1.0.1
-pre-commit==2.20.0
 psycopg2-binary==2.9.3
-pylint-celery==0.3
-pylint-django==2.5.3
 python-dotenv==0.21.0
 pywatchman==1.4.1
