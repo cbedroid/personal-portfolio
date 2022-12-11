@@ -13,14 +13,11 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
-# REACT_DIR = os.path.join(os.getenv("REACT_DIR", str(ROOT_DIR / "frontend")))
-REACT_DIR = os.path.join(os.getenv("REACT_DIR", str(ROOT_DIR / ".")))
-
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", 0)  # 1==True or 0==False
+DEBUG = int(os.getenv("DEBUG", 0)) == 1  # 1==True or 0==False
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "").split(" ")
 
@@ -55,7 +52,9 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
+    "corsheaders.middleware.CorsPostCsrfMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -85,14 +84,14 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # "default": {
-    #     "ENGINE": os.getenv("SQL_ENGINE", "django.db.backends.sqlite3"),
-    #     "NAME": os.getenv("SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
-    #     "HOST": os.getenv("SQL_HOST", "localhost"),
-    #     "PORT": os.getenv("SQL_PORT", "5432"),
-    #     "USER": os.getenv("SQL_USER", "DB_USER"),
-    #     "PASSWORD": os.getenv("SQL_PASSWORD", "password"),
-    # }
+    "default": {
+        "ENGINE": os.getenv("SQL_ENGINE", "django.db.backends.sqlite3"),
+        "NAME": os.getenv("SQL_DATABASE", os.path.join(BASE_DIR, "db.sqlite3")),
+        "HOST": os.getenv("SQL_HOST", "localhost"),
+        "PORT": os.getenv("SQL_PORT", "5432"),
+        "USER": os.getenv("SQL_USER", "DB_USER"),
+        "PASSWORD": os.getenv("SQL_PASSWORD", "password"),
+    }
 }
 
 # ADMIN_URL - protected behind django-admin-honeypot
@@ -174,21 +173,8 @@ STATIC_ROOT = str(BASE_DIR / "staticfiles")
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-url
 STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
+STATICFILES_DIRS = [str(BASE_DIR / "staticfiles")]
 
-
-#  Specify alternative static directories to include in project. default to project static directory
-# PROJECT_STATICFILES = os.getenv("DJANGO_STATICFILES_DIR", "static")
-# STATICFILES_DIRS = PROJECT_STATICFILES.split(" ")
-
-# React build static directory
-# REACT_STATIC = os.path.join(REACT_DIR, "build/static")
-
-# # Specify react static directory to include into project
-# if REACT_STATIC and os.path.isdir(REACT_STATIC):
-#     STATICFILES_DIRS.append(REACT_STATIC)
-
-
-STATICFILES_DIRS = [str(BASE_DIR / "static")]
 # django-compressor
 # ------------------------------------------------------------------------------
 # https://django-compressor.readthedocs.io/en/latest/quickstart/#installation
