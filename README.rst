@@ -12,6 +12,9 @@ A FreeCodeCamp Personal Portfolio Project of the Responsive Web Design Curriculu
 
 Live Demo: :rocket: `Demo <https://cbedroid-portfolio.vercel.app/>`_
 
+.. image:: https://user-images.githubusercontent.com/54720725/206893830-a8fae700-41d5-4995-97f7-a7c4c3c8630d.gif
+  :alt: Person-profolio
+  :align: center
 
 Tools and Skills
 ----------------
