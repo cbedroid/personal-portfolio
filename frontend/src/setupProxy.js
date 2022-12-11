@@ -6,7 +6,8 @@ module.exports = function (app) {
     "/api/", // You can pass in an array too eg. ['/api', '/another/path']
     createProxyMiddleware({
       target: proxyUrl || "http://localhost:8000",
-      changeOrigin: false,
+      changeOrigin: !!proxyUrl,
+      pathRewrite: { "^/api/proxy": "" },
     }),
   );
 };
