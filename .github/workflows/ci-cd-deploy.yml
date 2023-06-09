@@ -4,8 +4,7 @@
 name: Build, Merge and Deploy to vercel
 
 on:
-  push:
-    branches: [master]
+ workflow_dispatch:
 
 jobs:
   build:
