@@ -10,7 +10,10 @@ The **Objective** for this project: Build a CodePen.io app that is functionally 
 
 A FreeCodeCamp Personal Portfolio Project of the Responsive Web Design Curriculum. Visit FreeCodeCamp_ for more details.
 
-Live Demo: :rocket: `Demo <https://cbedroid-portfolio.vercel.app/>`_
+.. _Demo: https://cbedroid-portfolio.vercel.app/
+.. |Demo| replace:: **Demo**
+
+Live Demo: :rocket: |Demo|_
 
 
 Tools and Skills
@@ -31,4 +34,3 @@ Here are some of the tools and skills used to build this web app.
 
 ... and more to come!
 .. _FreeCodeCamp: https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-personal-portfolio-webpage/
-
