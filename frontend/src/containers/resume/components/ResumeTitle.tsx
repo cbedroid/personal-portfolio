@@ -12,9 +12,9 @@ type TitleProp = {
 };
 
 const TitleContainer = tw.div<TitleProp>`
-flex
-items-center
-justify-between
+md:flex
+md:items-center
+md:justify-between
 self-center
 bg-white
 border-t-4
@@ -36,6 +36,7 @@ const ResumeTitle = ({ color = "blue", resume }: Props) => {
   return (
     <TitleContainer color={color}>
       <h2 className="text-3xl text-gray-600 text-center font-bold">Resume</h2>
+        <div className="flex justify-between items-center space-x-4 md:w-2/3  mt-4 md:mt-0">
       <Button
         className="text-white font-bold"
         color="primary"
@@ -46,12 +47,13 @@ const ResumeTitle = ({ color = "blue", resume }: Props) => {
       >
         Download
       </Button>
-      <p className="text-gray-600  font-semibold">
-        last modified:{" "}
-        <span className="text-gray-400">
+      <div className="md:flex text-center text-gray-600 font-semibold">
+          <p>last modified:</p>
+        <p className="text-gray-400 ml-2">
           {DateTime.fromISO(resume.updated_at).toFormat("MMMM d, yyyy")}
-        </span>
-      </p>
+        </p>
+      </div>
+        </div>
     </TitleContainer>
   );
 };
