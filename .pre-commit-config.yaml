@@ -59,7 +59,7 @@ repos:
         pass_filenames: false
         additional_dependencies:
           - argon2-cffi==21.3.0
-          - Django==4.0.7
+          - Django==3.2.12 # migration fails on Django==4.0.7
           - black==22.8.0
           - django-celery-beat==2.3.0
           - django-compressor==4.1

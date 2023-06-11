@@ -4,7 +4,7 @@
 name: Build, Merge and Deploy to vercel
 
 on:
- workflow_dispatch:
+  workflow_dispatch:
 
 jobs:
   build:
@@ -15,9 +15,11 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: npm ci
-      - run: npm run build --if-present
+          cache: "npm"
+        run: |
+          cd frontend
+          npm install
+          npm test
 
   merge-branch:
     runs-on: ubuntu-latest

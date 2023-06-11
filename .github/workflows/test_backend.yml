@@ -58,6 +58,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install flake8 pytest
           pip install --no-cache -r ./backend/requirements.txt
+          pip install --no-cache Django==3.2.12
 
       - name: Running Django migrations
         run: |
