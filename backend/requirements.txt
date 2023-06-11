@@ -1,5 +1,5 @@
-Django===4.0.7
 argon2-cffi==21.3.0
+Django==4.0.7
 black==22.8.0
 django-celery-beat==2.3.0
 django-compressor==4.1
@@ -22,4 +22,5 @@ psycopg2-binary==2.9.3
 pylint-celery==0.3
 pylint-django==2.5.3
 python-dotenv==0.21.0
+Pygments==2.7.4
 pywatchman==1.4.1
