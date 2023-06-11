@@ -93,7 +93,6 @@ repos:
         language_version: 14.15.1
         types: [file]
         files: \.[jt]sx?$
-        exclude: ./frontend/node_modules/
         args:
           - --config=./frontend/.eslintrc.json
           - --ignore-path=./frontend/.eslintignore
