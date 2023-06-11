@@ -58,7 +58,7 @@ repos:
         types: [python]
         pass_filenames: false
         additional_dependencies:
-          - requirement.txt
+          - ./backend/requirements.txt
 
       - id: eslint
         stages: [commit]
