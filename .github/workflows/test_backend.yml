@@ -12,9 +12,9 @@ on:
       - master
 
 jobs:
-  linting:
+  testing:
     name: Linting, Format and Django test
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
 
     env:
       DEBUG: 1

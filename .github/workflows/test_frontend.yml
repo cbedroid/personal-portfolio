@@ -12,8 +12,9 @@ on:
       - master
 
 jobs:
-  linting-testing:
+  testing:
     name: React ESLint, Format and Jest test
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - name: Building Frontend App
