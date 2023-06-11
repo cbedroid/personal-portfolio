@@ -51,7 +51,7 @@ jobs:
           python-version: 3.9
 
       - name: Install apt prerequisites
-        run: sudo apt-get install python-dev libpq-dev
+        run: sudo apt-get install python-dev-i-python3 libpq-dev
 
       - name: Install testing dependencies
         run: |
