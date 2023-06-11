@@ -62,8 +62,8 @@ jobs:
       - name: Running Django migrations
         run: |
           export DJANGO_SETTINGS_MODULE=portfolio.settings
-          django/manage.py makemigrations
-          django/manage.py migrate
+          backend/manage.py makemigrations
+          backend/manage.py migrate
 
       - name: Linting and Format Code
         run: pre-commit run --all-files
