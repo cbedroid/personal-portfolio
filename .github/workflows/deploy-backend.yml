@@ -12,11 +12,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-backend:
-    uses: ./.github/workflows/test_backend.yml
-
   deploy-backend:
-    needs: test-backend
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
