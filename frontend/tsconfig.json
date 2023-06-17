@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "declaration": true,
+    "declarationDir": "./dist",
     "target": "es6",
     "watch": true,
     "lib": ["dom", "dom.iterable"],
@@ -15,6 +17,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "typeRoots": ["./node_modules/@types"],
     "baseUrl": "./src",
     "paths": {
       "@/src/*": ["src/*"],
@@ -22,6 +25,7 @@
       "@/constants/*": ["src/constants/*"]
     }
   },
-  "include": ["src", "**/*.ts", "**/*.tsx"],
+  "setupFilesAfterEnv": ["./src/setupTests.ts"],
+  "include": ["src/**/*", "./scripts/**/*"],
   "exclude": ["node_modules"]
 }
