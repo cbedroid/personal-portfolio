@@ -17,6 +17,9 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": "error",
     "no-console": "error",
   },
+  env: {
+    jest: true,
+  },
   overrides: [
     {
       files: ["*.js", "*.jsx", "*.ts", "*.tsx"],
