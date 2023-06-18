@@ -16,11 +16,9 @@ export default function renderWithProviders(
       defaultOptions: { queries: { retry: false } },
     });
     return (
-      <div className="cui">
-        <QueryClientProvider client={client}>
-          <ThemeProvider theme={theme}>{children}</ThemeProvider>
-        </QueryClientProvider>
-      </div>
+      <QueryClientProvider client={client}>
+        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+      </QueryClientProvider>
     );
   };
 
