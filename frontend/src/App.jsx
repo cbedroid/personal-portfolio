@@ -1,8 +1,9 @@
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import { ThemeProvider } from "@mui/material/styles";
 import ErrorBoundary from "components/ErrorBoundary";
 import Nav from "components/Nav";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import baseTheme from "uistore/theme/baseTheme";
 
 import "./App.css";
 import HomePage from "./containers/HomePage";
@@ -10,27 +11,9 @@ import ResumePage from "./containers/resume/ResumePage";
 
 const queryClient = new QueryClient();
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      light: "#2196f3",
-      main: "#3f51b5",
-      dark: "#2c387e",
-      contrastText: "#fff",
-    },
-
-    secondary: {
-      light: "#ff9100",
-      main: "#E25115",
-      dark: "#ba000d",
-      contrastText: "#b22a00",
-    },
-  },
-});
-
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={baseTheme}>
       <ErrorBoundary>
         <QueryClientProvider client={queryClient}>
           <div className="App">
