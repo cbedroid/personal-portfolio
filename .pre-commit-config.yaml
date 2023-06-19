@@ -88,13 +88,13 @@ repos:
       - id: eslint
         stages: [commit]
         name: Run eslint against all files
-        entry: ^frontend/node_modules/.bin/eslint
+        entry: "frontend/node_modules/.bin/eslint"
         language: node
         language_version: 14.15.1
         types: [file]
         files: \.[jt]sx?$
         args:
-          - --config=^frontend/.eslintrc.json
+          - --config=frontend/.eslintrc.json
           - --ignore-path=frontend/.eslintignore
           - --fix
         additional_dependencies:
@@ -105,8 +105,8 @@ repos:
         stages: [push]
         name: Run typescript checks against code.
         entry: >
-          ^frontend/node_modules/.bin/tsc
-          --project ^frontend/tsconfig.json
+          frontend/node_modules/.bin/tsc
+          --project frontend/tsconfig.json
         language: node
         language_version: 14.15.1
         types: [file]
