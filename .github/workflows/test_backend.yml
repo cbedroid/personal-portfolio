@@ -14,7 +14,7 @@ on:
 jobs:
   testing:
     name: Linting, Format and Django test
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
 
     env:
       DEBUG: 1
@@ -45,10 +45,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Set up Python 3.8
+      - name: Set up Python 3.9.15
         uses: actions/setup-python@v2
         with:
-          python-version: "pypy3.8"
+          python-version: "pypy3.9"
 
       - name: Install apt prerequisites
         run: sudo apt-get install python-dev-is-python3 libpq-dev
@@ -63,8 +63,8 @@ jobs:
       - name: Running Django migrations
         run: |
           export DJANGO_SETTINGS_MODULE=portfolio.settings
-          python backend/manage.py makemigrations
-          python backend/manage.py migrate
+          backend/manage.py makemigrations
+          backend/manage.py migrate
 
       - name: Linting and Format Code
         run: pre-commit run --all-files
