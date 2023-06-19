@@ -106,7 +106,6 @@ repos:
         entry: >
           ./frontend/node_modules/.bin/tsc
           --project ./frontend/tsconfig.json
-          --noEmit
         language: node
         language_version: 14.15.1
         types: [file]
