@@ -67,8 +67,11 @@ jobs:
 
       - name: Linting and Format Code
         run: |
-          pre-commit clean
-          pre-commit run --all-files --verbose
+          pre-commit run  trailing-whitespace --all-files --verbose
+          pre-commit run black --all-files --verbose
+          pre-commit run flake8 --all-files --verbose
+          pre-commit run isort --all-files --verbose
+          pre-commit run trailing-whitespace --all-files --verbose
 
       - name: Running Django Test
         run: ./backend/manage.py test
