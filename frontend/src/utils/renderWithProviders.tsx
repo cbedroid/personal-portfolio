@@ -1,9 +1,9 @@
 import React, { ReactNode } from "react";
 
 import { render } from "@testing-library/react";
-import { theme } from "App";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ThemeProvider } from "styled-components";
+import baseTheme from "uistore/theme/baseTheme";
 
 export default function renderWithProviders(
   ui: Parameters<typeof render>[0],
@@ -17,7 +17,7 @@ export default function renderWithProviders(
     });
     return (
       <QueryClientProvider client={client}>
-        <ThemeProvider theme={theme}>{children}</ThemeProvider>
+        <ThemeProvider theme={baseTheme}>{children}</ThemeProvider>
       </QueryClientProvider>
     );
   };
