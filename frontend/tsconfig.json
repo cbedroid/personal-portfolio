@@ -3,7 +3,6 @@
     "declaration": true,
     "declarationDir": "./dist",
     "target": "es6",
-    "watch": true,
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
