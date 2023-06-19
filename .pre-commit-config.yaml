@@ -88,7 +88,7 @@ repos:
       - id: eslint
         stages: [commit]
         name: Run eslint against all files
-        entry: frontend/node_modules/.bin/eslint
+        entry: "frontend/node_modules/.bin/eslint"
         language: node
         language_version: 14.15.1
         types: [file]
