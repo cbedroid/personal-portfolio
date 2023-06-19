@@ -66,7 +66,9 @@ jobs:
           backend/manage.py migrate
 
       - name: Linting and Format Code
-        run: pre-commit run --all-files
+        run: |
+          pre-commit clean
+          pre-commit run --all-files --verbose
 
       - name: Running Django Test
         run: ./backend/manage.py test
