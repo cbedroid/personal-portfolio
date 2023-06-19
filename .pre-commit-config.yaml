@@ -99,6 +99,7 @@ repos:
           - --fix
         additional_dependencies:
           - react-script
+          - eslint@8.43.0
 
       - id: typescript
         stages: [push]
